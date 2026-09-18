@@ -7,6 +7,8 @@ An end-to-end data analytics web application and content intelligence tool built
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B?logo=streamlit)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+🔗 **Live Demo:** [https://netflix-analytics-dashboard-mhtjumv4funq72gwgiavb7.streamlit.app/](https://netflix-analytics-dashboard-mhtjumv4funq72gwgiavb7.streamlit.app/)
+
 ---
 
 ## 📌 Key Features
