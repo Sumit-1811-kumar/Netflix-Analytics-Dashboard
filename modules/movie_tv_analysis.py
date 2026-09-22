@@ -7,7 +7,8 @@ from src.data_loader import explode_column
 def render_movie_tv_analysis(filtered_df: pd.DataFrame):
     st.header("🎬 Movie & TV Analysis")
     st.caption(
-        "Key performance metrics, catalog genres, target audience composition, movie lengths, season breakdowns, and director analytics."
+        "Key performance metrics, catalog genres, target audience composition, "
+        "movie lengths, season breakdowns, and director analytics."
     )
 
     if filtered_df.empty:
@@ -47,8 +48,7 @@ def render_movie_tv_analysis(filtered_df: pd.DataFrame):
 
     with col1:
         top_genres = (
-            top_genre_series
-            .head(10)
+            top_genre_series.head(10)
             .sort_values(ascending=True)
             .reset_index(name="count")
         )
@@ -83,7 +83,8 @@ def render_movie_tv_analysis(filtered_df: pd.DataFrame):
             color_discrete_sequence=["#E50914", "#B81D24", "#221F1F", "#666666"],
         )
         fig_mat.update_layout(
-            template="plotly_dark", margin=dict(t=40, b=20, l=20, r=20)
+            template="plotly_dark",
+            margin=dict(t=40, b=20, l=20, r=20),
         )
         st.plotly_chart(fig_mat, use_container_width=True)
 
@@ -119,7 +120,8 @@ def render_movie_tv_analysis(filtered_df: pd.DataFrame):
 
     with col4:
         tv_seas = filtered_df[
-            (filtered_df["type"] == "TV Show") & (filtered_df["seasons"].notna())
+            (filtered_df["type"] == "TV Show")
+            & (filtered_df["seasons"].notna())
         ]
         if not tv_seas.empty:
             seas_counts = (
